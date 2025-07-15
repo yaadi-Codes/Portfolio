@@ -1,0 +1,342 @@
+:root{
+    --pearl: #fbfcf8;
+    --blur-pearl: rgba(251, 252, 248, 0.6);
+    --charcoal: #1B1B1B;
+    --jet-black: #030303;
+    --light-royal-blue: #4169E1;
+    --darker-royal-blue: #002366;
+    --blur-DRB: rgba(0, 35, 102, 0.8);
+    --moonglare-yellow: #EEE8AA
+    
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Figtree, Roboto, sans-serif;
+    background-color: var(--jet-black);
+    color: var(--pearl);
+}
+
+header{
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--blur-DRB);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: var(--pearl);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+header h1{
+    display: inline-block;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid var(--pearl);
+    border-radius: 24px;
+
+}
+nav{
+    position: sticky;
+    top: 69px;  
+    z-index: 1000;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:  	var(--blur-pearl);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+}
+nav li{
+    text-align: center;
+    width: 20vw;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideInRight 2s ease;
+    transition: all 0.3s ease;
+    
+}
+
+nav a:hover{
+    background-color: var(--blur-DRB);
+    color: var(--pearl);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-shadow: 0 0 3px var(--moonglare-yellow);
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--charcoal);
+   
+}
+section{
+    height: calc(100vh - 70px);
+    max-width: 100%;
+    padding: 8% 5% 0;
+    margin-bottom: 50px;
+    
+}
+
+#home{
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: linear-gradient(167deg, var(--jet-black) 0%, var(--darker-royal-blue) 100%);
+
+}
+
+#profile-pic{
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 9%;
+    box-shadow: 5px 0 30px var(--moonglare-yellow);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 350px;
+    width: 35%;
+    border-radius: 50%;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+#home-text{
+    position: absolute;
+    top: 280px;
+    left: 10%;
+    width: 60%;
+    max-width: 700px;
+    z-index: 1;
+}
+#helloWorld{
+    font-family: Roboto, sans-serif;
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px var(--light-royal-blue) ;
+    color: var(--pearl);
+    margin-bottom: 25px;
+    white-space: nowrap;
+    animation: fadeIn 1.5s ease-in-out;
+
+}
+.wave{
+    display: inline-block;
+    font-size: 0.9em;
+    position: relative;
+    top: -0.1em;
+    left: -.7em;
+    transform: scaleX(-1);
+    transform-origin: 60% 90%;
+    animation: wave-hand 2s ease-in-out; 
+    animation-delay: 1.7s ;
+    will-change: transform;
+
+}
+.wave:hover{
+    animation: wave-hand-hover 2s ease-in-out;
+     
+}
+
+
+#typed-text {
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    text-shadow: 0 0 3px rgba(238, 232, 170, 0.4);
+    overflow: hidden;
+}
+#introduction{
+    display: inline-block;
+    font-family: Figtree, Roboto, sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #EEE8AA;
+}
+.cursor {
+    font-size: 1.3em;
+    animation: blink 0.7s infinite;
+}
+
+
+#cta {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--pearl);
+    
+}
+
+#cta a {
+    display: inline-block;
+    color: var(--light-royal-blue);
+    padding: 10px;
+    text-decoration: none;
+    margin: 0 8px;
+    text-shadow: 0 0 3px rgba(238, 232, 170, 0.25)
+}
+#viewProject{
+    animation: slideInLeft 2s ease;
+}
+#contactMe{
+    animation: slideInRight 2s ease;
+}
+#cta a:hover {
+    border-radius: 24px;
+    background-color: var(--blur-DRB);
+    color: var(--pearl);
+}
+
+/* Keyframes for waving */
+@keyframes wave-hand {
+  0% { transform: scaleX(-1) rotate(0deg); }
+  10% { transform: scaleX(-1) rotate(-14deg); }
+  20% { transform: scaleX(-1) rotate(8deg); }
+  30% { transform: scaleX(-1) rotate(-14deg); }
+  40% { transform: scaleX(-1) rotate(4deg); }
+  50% { transform: scaleX(-1) rotate(-10deg); }
+  60% { transform: scaleX(-1) rotate(0deg); }
+  100% { transform: scaleX(-1) rotate(0deg); }
+}
+
+@keyframes wave-hand-hover {
+    0% { transform: scaleX(-1) rotate(0deg); }
+    10% { transform: scaleX(-1) rotate(-14deg); }
+    20% { transform: scaleX(-1) rotate(8deg); }
+    30% { transform: scaleX(-1) rotate(-14deg); }
+    40% { transform: scaleX(-1) rotate(4deg); }
+    50% { transform: scaleX(-1) rotate(-10deg); }
+    60% { transform: scaleX(-1) rotate(0deg); }
+    100% { transform: scaleX(-1) rotate(0deg); }
+}
+
+/* cursor blinking animation style */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation to slide in from the right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* Animation to slide in from the left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+    header h1{
+        font-size: 0.8em;
+    }
+    #profile-pic{
+        max-width: 200px;
+        width: 50%;
+        right: 30px;
+    }
+    #helloWorld{
+        font-size: 2em;
+    }
+    #home-text{
+        width: 85%;
+        top: 35%;
+        left: 30px;
+    }
+    nav{
+        top: 66px;
+    }
+    #introduction{
+        font-size: 1em;
+    }
+    #cta {
+        font-size: .9em;
+    }
+
+    #cta a {
+        padding: 8px;
+        margin: 0 6px;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 880px) {
+    header h1{
+        font-size: 0.8em;
+    }
+    #profile-pic{
+        max-width: 250px;
+        width: 40%;
+        right: 50px;
+
+    }
+    #helloWorld{
+        font-size: 2.5em;
+    }
+    #home-text{
+        width: 85%;
+        top: 33%;
+        left: 50px;
+    }
+    nav{
+        top: 66px;
+    }
+    #introduction{
+        font-size: 1.1em;
+    }
+    #cta {
+        font-size: 1em;
+    }
+
+    #cta a {
+        padding: 9px;
+        margin: 0 9px;
+    }
+    
+}

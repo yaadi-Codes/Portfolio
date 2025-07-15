@@ -1,2 +1,12 @@
 #environment variables
 .env
+
+#node modules
+node_modules/
+
+.vscode
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malique's Portfolio <%= title ? '- ' + title : '' %></title>
+
+    <link rel="icon" href="/assets/githubPfp.png" sizes = '16x16' type="image/png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- Google Font Style links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"><!-- Figtree -->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><!-- Roboto -->
+
+
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#contact"><li>Contact</li></a>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div id="home-content">
+            <img src="/assets/githubPfp.png" alt="Profile Picture" id="profile-pic">
+            <div id="home-text">
+                <p id="helloWorld">Hello,<span>World <span class="wave" role="img" aria-label="waving hand">👋</span></span></p>
+                <p id="introduction"><span id="typed-text"></span><span class="cursor">|</span></p>
+
+                <p id="cta">
+                    <a id="viewProject" href="#projects">View Projects</a> |
+                    <a id="contactMe" href="#contact">Contact Me</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br>
+    <section id="about">This is About Section</section>
+    <section id="projects">This is Projects Section</section>
+    <section id="contact">and this is Contact section</section>
+
+    <script src="JavaScript/functionality.js"></script>
+</body>
+</html>
